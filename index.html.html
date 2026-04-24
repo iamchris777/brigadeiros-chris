@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brigadeiros Chris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="promo-bar">✨ Pedidos abiertos | Entregas en universidad | Stock limitado</div>
+
+<header class="navbar">
+  <img src="logo.png" class="logo" alt="Logo Brigadeiros Chris">
+  <nav>
+    <a href="#menu">Menú</a>
+    <a href="#about">Nosotros</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+  <button class="cart-toggle" onclick="toggleCart()">🛒 <span id="cart-count">0</span></button>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Brigadeiros Artesanales Premium</h1>
+    <p>Chocolate, textura y presentación que enamoran desde el primer bocado.</p>
+    <a href="#menu" class="btn">Comprar Ahora</a>
+  </div>
+  <img src="productos.jpg" class="hero-img" alt="Productos Brigadeiros">
+</section>
+
+<section id="about" class="about">
+  <h2>Nuestra Esencia</h2>
+  <p>
+    Elaboramos brigadeiros premium con ingredientes seleccionados y presentación cuidada,
+    pensados para convertir cualquier antojo en una experiencia memorable.
+  </p>
+</section>
+
+<section id="menu" class="menu">
+  <h2>Menú</h2>
+  <div class="products">
+
+    <div class="product-card">
+      <h3>Clásico</h3>
+      <p>S/ 1.50</p>
+      <button onclick="addToCart('Brigadeiro Clásico',1.5)">Agregar</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Coco</h3>
+      <p>S/ 1.50</p>
+      <button onclick="addToCart('Brigadeiro Coco',1.5)">Agregar</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Oreo</h3>
+      <p>S/ 2.00</p>
+      <button onclick="addToCart('Brigadeiro Oreo',2)">Agregar</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Chocolate Blanco</h3>
+      <p>S/ 2.00</p>
+      <button onclick="addToCart('Clásico con Cobertura Blanca',2)">Agregar</button>
+    </div>
+
+    <div class="product-card special">
+      <h3>Caja x6</h3>
+      <p>S/ 10.00</p>
+      <small>1 clásico + sabores a elección</small>
+      <button onclick="addToCart('Caja x6',10)">Agregar</button>
+    </div>
+
+    <div class="product-card special">
+      <h3>Caja x12</h3>
+      <p>S/ 22.00</p>
+      <small>2 clásicos + sabores a elección</small>
+      <button onclick="addToCart('Caja x12',22)">Agregar</button>
+    </div>
+
+  </div>
+</section>
+
+<aside class="cart-panel" id="cartPanel">
+  <h2>Tu Pedido</h2>
+  <div id="cart-items"></div>
+  <h3>Total: S/ <span id="total">0.00</span></h3>
+  <button class="btn" onclick="sendWhatsApp()">Finalizar Pedido</button>
+</aside>
+
+<footer id="contact">
+  <p>📲 Pedidos por WhatsApp: wa.me/51971693488</p>
+  <p>© 2026 Brigadeiros Chris</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
